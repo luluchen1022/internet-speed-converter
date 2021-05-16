@@ -1,21 +1,18 @@
 import './App.css';
 import React, { useState } from 'react'
-
+import { UnitControl } from './components/UnitControl'
+import { CardFooter } from './components/CardFooter'
 function App() {
   const [inputValue, setInputValue] = useState(0)
   return (
     <div className="container">
       <div className="card-header">Network Speed Converter</div>
       <div className="card-body">
-        <div className="unit-control">
-          <div className="unit">Mbps</div>
-
-          <div className="unit">MB/s</div>
-        </div>
+        <UnitControl />
         <div className="converter">
           <div>
             <div className="converter-title">Set</div>
-            <div><input className="converter-input" type="number" min="0" onChange={(e) => setInputValue(e.target.valNaue)} value={inputValue}></input></div>
+            <div><input className="converter-input" type="number" min="0" onChange={(e) => setInputValue(e.target.value)} value={inputValue}></input></div>
           </div>
           <div>
             <div className="converter-title">Show</div>
@@ -23,7 +20,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="card-footer">Fast</div>
+      <CardFooter inputValue={inputValue} />
     </div>
   );
 }
