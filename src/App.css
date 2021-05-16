@@ -37,5 +37,15 @@
   display: flex;
   justify-content: space-around;
   padding: 10px;
+}
 
+.converter-title{
+  padding: 10px;
+  color: seagreen;
+  font-weight: 800;
+}
+
+.converter-input{
+  padding: 5px;
+  width: 50px;
 }
